@@ -4,10 +4,8 @@ import Home from './components/Home'
 import Login from './components/Login'
 import Products from './components/Products'
 import ProductDetails from './components/ProductDetails'
-import SimilarProducts from './components/SimilarProducts'
 import ContextView from './Context/ContextView'
 import CartView from './components/CartView'
-//import ProtectedRoute from './components/ProtectedRoute'
 import './App.css';
 
 function App() {
@@ -64,7 +62,6 @@ function App() {
     <Route  path="/" element={<Home/>}/>
     <Route path="/products" element={<Products/>}/>
     <Route path="/productDetails/:id" element={<ProductDetails/>}/>
-    <Route path="/similarProducts" element={<SimilarProducts/>}/>
     <Route path="/cartView" element={<CartView/>}/>
     </Routes>
     </ContextView.Provider>

@@ -11,6 +11,7 @@ const PrimeDeals = ()=>{
 
     useEffect(()=>{setPrime("Loading")
     const jwttoken = Cookies.get("JWTToken");
+    const url = 'https://apis.ccbp.in/prime-deals';
     
     const options = {
         method:"GET",
@@ -18,16 +19,14 @@ const PrimeDeals = ()=>{
             Authorization : `Bearer ${jwttoken}`
         }
     }
-    console.log("jwttoken in prime : ",jwttoken);
-    console.log(options.headers.Authorization);
+    
 
      async function getPrimeDealsData(){
 
         try{
-            const response = await fetch('https://apis.ccbp.in/prime-deals',options)
+            const response = await fetch(url,options)
             const data = await response.json()
-            console.log(response);
-            console.log(data);
+           
             if (response.ok===true){
             
                 const updatedData = data.prime_deals.map((eachDeal)=>({
@@ -49,8 +48,7 @@ const PrimeDeals = ()=>{
             setPrime("Failure")
         }
 
-           
-           //console.log(data);
+
 
            
            

@@ -42,6 +42,7 @@ const ProductDetails = ()=>{
       setQuantity(1)
         const getProductDetails = async () => {
             const token = Cookies.get("JWTToken");
+            const url = `https://apis.ccbp.in/products/${id}`
             const options = {
                 headers: {
                     Authorization: `Bearer ${token}`
@@ -49,7 +50,7 @@ const ProductDetails = ()=>{
                 method: 'GET',
             };
             
-            const response = await fetch(`https://apis.ccbp.in/products/${id}`, options);
+            const response = await fetch(url, options);
             const data = await response.json();
             if (response.ok===true){
               const updatedData = getFormattedData(data);
