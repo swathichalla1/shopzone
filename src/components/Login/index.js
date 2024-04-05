@@ -5,7 +5,7 @@ import Cookies from 'js-cookie'
 import './index.css'
 
 const Login = ()=>{
-    const navigate = useNavigate();
+    const navig = useNavigate();
 
     const [username,setUsername] = useState("");
     const [password,setPassword] = useState("");
@@ -23,7 +23,7 @@ const Login = ()=>{
    const onSubmitSuccess = (jwttoken)=>{
 
     Cookies.set("JWTToken",jwttoken,{expires:30});
-    navigate("/",{ replace: true });
+    navig("/",{ replace: true });
 }
 
    const onSubmitFailure = (err)=>{
