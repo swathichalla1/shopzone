@@ -1,0 +1,47 @@
+.LoginContainer{
+    background-color:cadetblue;
+    min-height:100vh;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+}
+
+.FormContainer{
+    background-color:white;
+    color:black;
+    border:2px solid black;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:flex-start;
+    
+    
+    padding:15px;
+}
+
+.eachContainer{
+    display:flex;
+    flex-direction:column;
+    margin-bottom:15px;
+}
+.loginButton{
+    align-self:center;
+    background-color:cornflowerblue;
+    color:white;
+    border-radius:10px;
+    padding-top:10px;
+    padding-bottom:10px;
+    min-width:35%;
+    font-weight:400;
+    cursor:pointer;
+}
+
+.loginButton:Hover{
+    background-color:green;
+}
+.error{
+    color:red;
+    font-size:10px;
+    margin:5px;
+}

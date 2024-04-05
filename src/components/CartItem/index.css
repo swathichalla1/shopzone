@@ -1,0 +1,28 @@
+.cart{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    background-color:antiquewhite;
+    padding:10px;
+    align-items:center;
+    margin:20px;
+}
+.image{
+    height:100px;
+    width:100px;
+}
+.quantityContainer{
+    display:flex;
+    flex-direction:row;
+
+}
+
+.symbol{
+    font-size:2em;
+    margin:5px;
+}
+.quantity{
+    font-size:20px;
+    color:crimson;
+    margin:5px;
+}

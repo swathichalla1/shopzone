@@ -1,0 +1,11 @@
+.AllprimeContainer{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+}
+
+.register-prime-image{
+    height:60vh;
+    width:100%;
+    
+}
