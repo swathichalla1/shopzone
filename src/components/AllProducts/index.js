@@ -14,14 +14,21 @@ const AllProducts = () => {
         setLoading(true)
         const getAllProductDetails = async () => {
             const token = Cookies.get("JWTToken");
+
             const options = {
                 headers: {
                     Authorization: `Bearer ${token}`
                 },
                 method: 'GET',
             };
+            console.log("jwttoken in pro : ",token);
+    console.log(options.headers.Authorization);
             const response = await fetch("https://apis.ccbp.in/products", options);
             const data = await response.json();
+
+            console.log(response);
+            console.log(data);
+
             if (response.ok===true){
                 const updatedData = data.products.map((product)=>(
                     {title: product.title,
