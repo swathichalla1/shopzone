@@ -25,6 +25,7 @@ const PrimeDeals = ()=>{
 
         try{
             const response = await fetch(url,options)
+            console.log(response);
             const data = await response.json()
            
             if (response.ok===true){
@@ -53,7 +54,7 @@ const PrimeDeals = ()=>{
            
            
 }
-return ()=>(getPrimeDealsData());
+getPrimeDealsData();
 },[]);
 
 const PrimeSuccessView = ()=>(

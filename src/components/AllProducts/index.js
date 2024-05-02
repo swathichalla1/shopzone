@@ -40,7 +40,7 @@ const AllProducts = () => {
             }
         };
         
-        return ()=>getAllProductDetails();
+        getAllProductDetails();
     }, []);
 
 
